@@ -1,6 +1,7 @@
-# Learning Deploying a Python Flask Example Application Using Heroku
+# Learning Deploying a Python Flask Example Application Using Heroku - Neural Trading Example App
 
 <p align="center">
+    <h1>Learning Deploying a Python Flask Example Application Using Heroku - Neural Trading Example App</h1>
     <a href="#" alt=""><img src="https://img.shields.io/github/last-commit/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
     <a href="#" alt=""><img src="https://img.shields.io/github/repo-size/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
     <a href="#" alt=""><img src="https://img.shields.io/github/license/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
