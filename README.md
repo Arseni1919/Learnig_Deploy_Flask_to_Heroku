@@ -10,7 +10,15 @@
 
 ## About
 
-Heroku removes much of the infrastructure burden related to building and running web applications, allowing you to focus on creating an awesome app.
+Heroku makes building and deploying applications really friendly for developers.
+It removes much of the burden related to building and running web applications,
+taking care of most infrastructure details and letting you focus on creating and improving the app.
+Some of the details handled by Heroku include:
+
+- Provisioning HTTPS certificates
+- Managing DNS records
+- Running and maintaining servers
+
 
 ## Process
 
@@ -28,6 +36,47 @@ which packages must be installed to run your application code.
 
 - Writing the Application Code
 - Running the Python Flask Example Locally
+
+### [Deploying the Application to Heroku](https://realpython.com/flask-by-example-part-1-project-setup/#deploying-the-application-to-heroku)
+
+- Heroku Account Setup
+- Heroku Command-Line Interface (CLI)
+
+The Heroku command-line interface (CLI) is a tool that allows you to create and
+manage Heroku applications from the terminal.
+
+Installation:
+```shell
+$ curl https://cli-assets.heroku.com/install.sh | sh
+```
+
+Login:
+```shell
+$ heroku login
+```
+
+- Application Deployment to Heroku
+
+The first step is to create a file named Procfile in the project’s root directory.
+This file tells Heroku how to run the app. You can create it by running the following command:
+```shell
+$ echo "web: gunicorn app:app" > Procfile
+```
+
+Note that this filename must start with a capital letter.
+This file tells Heroku to serve your application using [Gunicorn](https://gunicorn.org/),
+a Python Web Server Gateway Interface (WSGI) HTTP server compatible with various web frameworks,
+including Flask. Make sure to install Gunicorn and update the requirements.txt file using pip:
+```shell
+$ python3 -m pip install gunicorn==20.0.4
+$ python3 -m pip freeze > requirements.txt
+```
+
+
+
+
+
+
 
 ## Credits
 
