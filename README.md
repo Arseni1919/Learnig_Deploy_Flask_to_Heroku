@@ -98,6 +98,127 @@ $ heroku open
 ## Redeploy The App
 
 Now let’s make a small change to the app and see how you can redeploy it. Edit `app.py` and modify the string a bit.
+```shell
+$ git add app.py
+$ git commit -m "Change the welcome message"
+$ git push heroku master
+```
+
+## [Using Heroku Pipelines to Implement a Deployment Workflow](https://realpython.com/flask-by-example-part-1-project-setup/#using-heroku-pipelines-to-implement-a-deployment-workflow)
+
+This particular workflow uses three separate environments called *local*, *staging*, and *production*.
+This kind of setup is widely used in professional projects since it allows testing and
+reviewing new versions before deploying them to production and putting them in front of real users.
+
+1. Development is the local environment.
+1. Staging is the preproduction environment used for previews and testing.
+1. Production is the live site accessed by final users.
+
+In previous sections, you saw how to run the application on your local environment and
+in the production environment on Heroku.
+Adding a staging environment can greatly benefit the development process.
+The main purpose of this environment is to integrate changes from all new branches and
+to run the integration tests against the build, which will become the next release.
+
+<p align="center">
+    <img src="static/img/pic1.png" alt="drawing" width="400"/>
+</p>
+
+### [Implementing the Deployment Workflow in Heroku](https://realpython.com/flask-by-example-part-1-project-setup/#implementing-the-deployment-workflow-in-heroku)
+
+Implementing the workflow in Heroku consists of two steps:
+
+1. Creating separate applications for staging and production
+1. Making both applications part of the same pipeline
+
+A **Heroku pipeline** is a group of applications tied together by a workflow.
+Each one of these applications is an environment in the development workflow, like staging or production.
+Using pipelines guarantees that, after promotion, production will run the exact same code that you reviewed in staging.
+
+In this tutorial, the previously created Heroku application your-unique-name-app is used as the production environment.
+You should create a new Heroku app for the staging environment using these commands:
+
+```shell
+$ heroku create your-unique-name-app-staging --remote staging
+$ git push staging master
+```
+
+Running these commands creates a new Heroku app named `your-unique-name-app-staging`
+and deploys the application to it using Git.
+You can then access the staging app at https://your-unique-name-app-staging.herokuapp.com/.
+Note that a Git remote named `staging` is associated with this application.
+
+Now that you have Heroku applications for production and staging,
+you’re ready to create a Heroku pipeline that links them together.
+You can use the Heroku CLI to create the pipeline:
+```shell
+$ heroku pipelines:create --app realpython-example-app \
+    --stage production \
+    realpython-example-app
+
+(venv) (base) Arsenis-MacBook-Pro:Learnig_Deploy_Flask_to_Heroku arseniperchik$ heroku pipelines:create --app neural-trading-example-app --stage production neural-trading-example-app
+ ›   Warning: heroku update available from 7.47.7 to 7.56.0.
+Creating neural-trading-example-app pipeline... done
+Adding ⬢ neural-trading-example-app to neural-trading-example-app pipeline as production... done
+```
+
+The command above creates a pipeline named realpython-example-app and
+adds the app named realpython-example-app as the production environment.
+Next, run the following command to create a Git remote that points to this app, naming it prod:
+```shell
+$ heroku git:remote --app realpython-example-app --remote prod
+From now on, you can refer to the production deployment as prod.
+```
+
+Next, add the staging application to the same pipeline by running the following command:
+```shell
+$ heroku pipelines:add realpython-example-app \
+  --app realpython-example-app-staging \
+  --stage staging
+
+(venv) (base) Arsenis-MacBook-Pro:Learnig_Deploy_Flask_to_Heroku arseniperchik$ heroku pipelines:add neural-trading-example-app --app nt-example-app-staging --stage staging
+ ›   Warning: heroku update available from 7.47.7 to 7.56.0.
+Adding ⬢ nt-example-app-staging to neural-trading-example-app pipeline as staging... done
+```
+
+### [Deploying and Promoting to Staging and Production](https://realpython.com/flask-by-example-part-1-project-setup/#deploying-and-promoting-to-staging-and-production)
+
+Now that you have your applications and pipeline configured,
+you can use it to deploy your application to staging, review it there, and then promote it to production.
+
+You can deploy this new version to your staging environment by running the following commands:
+
+```shell
+$ git add app.py
+$ git commit -m "Another change to the welcome message"
+$ git push staging master
+```
+
+```shell
+```
+
+```shell
+```
+
+```shell
+```
+
+```shell
+```
+```shell
+```
+```shell
+```
+
+```shell
+```
+
+```shell
+```
+```shell
+```
+
+
 
 
 ## Credits
@@ -105,6 +226,7 @@ Now let’s make a small change to the app and see how you can redeploy it. Edit
 - [Bootstrap](https://getbootstrap.com/)
 - [Bootstrap - Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Deploying a Python Flask Example Application Using Heroku | Real Python](https://realpython.com/flask-by-example-part-1-project-setup/)
+- [Getting Started on Heroku with Python | Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)
 - [Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
 
 
