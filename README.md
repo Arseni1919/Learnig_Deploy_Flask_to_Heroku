@@ -194,39 +194,36 @@ $ git commit -m "Another change to the welcome message"
 $ git push staging master
 ```
 
-```shell
+When you’re happy with the changes, you can promote the new version to production using the Heroku CLI:
+
+```bash
+$ heroku pipelines:promote --remote staging
 ```
 
-```shell
-```
+The above command deploys to production the exact same version that is currently running in staging.
+As you’ll notice, in this case,
+there’s no build step since the same build from staging is used and deployed to production.
+You can verify at https://realpython-example-app.herokuapp.com/ that the application was promoted and
+that it’s running the latest version.
 
-```shell
-```
+## [Managing Settings and Secrets for Different Environments](https://realpython.com/flask-by-example-part-1-project-setup/#managing-settings-and-secrets-for-different-environments)
 
-```shell
-```
-```shell
-```
-```shell
-```
-
-```shell
-```
-
-```shell
-```
-```shell
-```
+Didn't get the idea.
 
 
+## Links
 
+- [staging](https://nt-example-app-staging.herokuapp.com/)
+- [prod](https://neural-trading-example-app.herokuapp.com/)
 
 ## Credits
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Bootstrap - Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Deploying a Python Flask Example Application Using Heroku | Real Python](https://realpython.com/flask-by-example-part-1-project-setup/)
+- [Python Web Applications: Deploy Your Script as a Flask App | Real Python](https://realpython.com/python-web-applications/)
 - [Getting Started on Heroku with Python | Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)
+- [Pipelines | Heroku](https://devcenter.heroku.com/articles/pipelines)
 - [Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
 
 
