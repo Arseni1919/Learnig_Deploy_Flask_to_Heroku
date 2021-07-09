@@ -177,8 +177,8 @@ adds the app named realpython-example-app as the production environment.
 Next, run the following command to create a Git remote that points to this app, naming it prod:
 ```shell
 $ heroku git:remote --app realpython-example-app --remote prod
-From now on, you can refer to the production deployment as prod.
 ```
+From now on, you can refer to the production deployment as prod.
 
 Next, add the staging application to the same pipeline by running the following command:
 ```shell
@@ -235,6 +235,8 @@ Didn't get the idea.
 - [Getting Started on Heroku with Python | Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)
 - [Pipelines | Heroku](https://devcenter.heroku.com/articles/pipelines)
 - [Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
+- [favicon-converter](https://favicon.io/favicon-converter/)
+- [Blueprints in Flask | Real Python](https://realpython.com/flask-blueprint/#what-a-flask-blueprint-looks-like)
 
 
 
