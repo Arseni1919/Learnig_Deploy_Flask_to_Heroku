@@ -19,6 +19,15 @@ Some of the details handled by Heroku include:
 - Managing DNS records
 - Running and maintaining servers
 
+## Contents
+
+- [Creating the Python Flask Example Application](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#creating-the-python-flask-example-application)
+- [Deploying the Application to Heroku](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#deploying-the-application-to-heroku)
+- [Redeploy The App](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#redeploy-the-app)
+- [Using Heroku Pipelines to Implement a Deployment Workflow](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#using-heroku-pipelines-to-implement-a-deployment-workflow)
+- [Managing Settings and Secrets for Different Environments](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#managing-settings-and-secrets-for-different-environments)
+- [Links To The Different Stages](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#links)
+- [Credits](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#credits)
 
 ## Process
 
