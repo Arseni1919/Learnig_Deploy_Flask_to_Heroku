@@ -72,10 +72,32 @@ $ python3 -m pip install gunicorn==20.0.4
 $ python3 -m pip freeze > requirements.txt
 ```
 
+Don't forget to commit all the changes to the Git.
+
+You can create the application in Heroku by running the following command:
+```shell
+$ heroku create your-unique-name-app
+```
+
+Running the above command initializes the Heroku application, creating a Git remote named heroku.
+Next, you can push the Git repository to this remote to trigger the building and deployment process:
+```shell
+$ git push heroku master
+```
+
+*Congratulations, the app is now online!*
+The output shows the building process, including the installation of dependencies and the deployment.
+On line 39, you’ll find the URL for your application.
+In this case, it’s https://your-unique-name-app.herokuapp.com/.
+You can also use the following Heroku CLI command to open your app’s URL:
+```shell
+$ heroku open
+```
 
 
+## Redeploy The App
 
-
+Now let’s make a small change to the app and see how you can redeploy it. Edit `app.py` and modify the string a bit.
 
 
 ## Credits
