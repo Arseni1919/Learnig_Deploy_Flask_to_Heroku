@@ -1,12 +1,12 @@
 <!-- # Learning Deploying a Python Flask Example Application Using Heroku - Neural Trading Example App -->
 
-<p align="center">
     <h1 align="center">Learning Deploying a Python Flask Example Application Using Heroku - Neural Trading Example App</h1>
-    <a align="center" href="#" alt=""><img src="https://img.shields.io/github/last-commit/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
-    <a align="center" href="#" alt=""><img src="https://img.shields.io/github/repo-size/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
-    <a align="center" href="#" alt=""><img src="https://img.shields.io/github/license/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
-    <a align="center" href="#" alt=""><img src="https://img.shields.io/github/languages/top/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
-    <a align="center" href="https://github.com/Arseni1919" alt="Follow"><img src="https://img.shields.io/github/followers/Arseni1919?label=Follow&style=social" /></a>
+<p align="center">
+    <a href="#" alt=""><img src="https://img.shields.io/github/last-commit/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
+    <a href="#" alt=""><img src="https://img.shields.io/github/repo-size/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
+    <a href="#" alt=""><img src="https://img.shields.io/github/license/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
+    <a href="#" alt=""><img src="https://img.shields.io/github/languages/top/Arseni1919/Learnig_Deploy_Flask_to_Heroku" /></a>
+    <a href="https://github.com/Arseni1919" alt="Follow"><img src="https://img.shields.io/github/followers/Arseni1919?label=Follow&style=social" /></a>
 </p>
 
 ## About
