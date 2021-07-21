@@ -221,7 +221,81 @@ that it’s running the latest version.
 Didn't get the idea.
 
 
-##
+## [APScheduler](https://apscheduler.readthedocs.io/en/latest/userguide.html#)
+
+Installing:
+
+```bash
+$ pip install apscheduler
+```
+
+### Configuring the scheduler:
+
+```python
+from apscheduler.schedulers.background import BackgroundScheduler
+scheduler = BackgroundScheduler()
+# Initialize the rest of the application here, or before the scheduler initialization
+```
+
+### Starting the scheduler:
+
+```python
+scheduler.start()
+```
+
+### Adding jobs:
+
+There are two ways to add jobs to a scheduler:
+
+- by calling `add_job()`
+
+- by decorating a function with `scheduled_job()`
+
+The first way is the most common way to do it.
+The second way is mostly a convenience to declare jobs that don’t change during the application’s run time.
+The `add_job()` method returns a `apscheduler.job.Job` instance that you can use to modify or remove the job later.
+
+### Removing jobs:
+
+When you remove a job from the scheduler, it is removed from its associated job store and will not be executed anymore.
+There are two ways to make this happen:
+
+- by calling `remove_job()` with the job’s ID and job store alias
+
+- by calling `remove()` on the Job instance you got from `add_job()`
+
+The latter method is probably more convenient,
+but it requires that you store somewhere the `Job` instance you received when adding the job.
+For jobs scheduled via the `scheduled_job()`, the first way is the only way.
+
+```python
+job = scheduler.add_job(myfunc, 'interval', minutes=2)
+job.remove()
+
+scheduler.add_job(myfunc, 'interval', minutes=2, id='my_job_id')
+scheduler.remove_job('my_job_id')
+```
+
+### Pausing and resuming jobs:
+
+```python
+apscheduler.job.Job.pause()
+apscheduler.schedulers.base.BaseScheduler.pause_job()
+
+# To resume:
+apscheduler.job.Job.resume()
+apscheduler.schedulers.base.BaseScheduler.resume_job()
+```
+
+### Getting a list of scheduled jobs:
+
+To get a machine processable list of the scheduled jobs, you can use the `get_jobs()` method.
+It will return a list of `Job` instances.
+If you’re only interested in the jobs contained in a particular job store,
+then give a job store alias as the second argument.
+
+As a convenience, you can use the `print_jobs()` method which will print out a formatted list of jobs,
+their triggers and next run times.
 
 ## Links
 
