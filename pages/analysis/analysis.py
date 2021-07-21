@@ -1,7 +1,7 @@
 import time
 
 from apscheduler.schedulers.background import BackgroundScheduler
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Blueprint, render_template, redirect, url_for, jsonify
 from functions import *
 
 analysis_bp = Blueprint('analysis_bp', __name__,
@@ -54,5 +54,9 @@ def clear_func():
     return redirect(url_for('analysis_bp.analysis_home_func'))
 
 
+@analysis_bp.route('/list')
+def list_func():
+    # status: active, "", disabled
+    return jsonify(list_to_print)
 
 
