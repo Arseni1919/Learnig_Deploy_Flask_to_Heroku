@@ -17,8 +17,7 @@ list_to_print = []
 # @scheduler.scheduled_job('interval', seconds=1, id='time_list')
 def timed_job():
     if len(list_to_print) > 4:
-        print(f'len of the list: {len(list_to_print)}')
-
+        # print(f'len of the list: {len(list_to_print)}')
         scheduler.remove_job('time_list')
     else:
         list_to_print.append(datetime.datetime.now())
@@ -39,10 +38,10 @@ def analysis_home_func():
 def refresh_func():
     # status: active, "", disabled
     names_of_jobs = [item.id for item in scheduler.get_jobs()]
-    scheduler.print_jobs()
+    # scheduler.print_jobs()
 
     if 'time_list' not in names_of_jobs:
-        print(f'names_of_jobs: {names_of_jobs} and entered inside the if statement')
+        # print(f'names_of_jobs: {names_of_jobs} and entered inside the if statement')
         scheduler.add_job(timed_job, 'interval', seconds=1, id='time_list')
 
     return redirect(url_for('analysis_bp.analysis_home_func'))
