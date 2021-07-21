@@ -27,12 +27,15 @@ Some of the details handled by Heroku include:
 - [Redeploy The App](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#redeploy-the-app)
 - [Using Heroku Pipelines to Implement a Deployment Workflow](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#using-heroku-pipelines-to-implement-a-deployment-workflow)
 - [Managing Settings and Secrets for Different Environments](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#managing-settings-and-secrets-for-different-environments)
+- [APScheduler](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#apscheduler)
 - [Links To The Different Stages](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#links)
 - [Credits](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#credits)
 
 ## Process
 
 ### [Creating the Python Flask Example Application](https://realpython.com/flask-by-example-part-1-project-setup/#creating-the-python-flask-example-application)
+
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
 - Initializing the Project
 - Installing Dependencies
@@ -48,6 +51,8 @@ which packages must be installed to run your application code.
 - Running the Python Flask Example Locally
 
 ### [Deploying the Application to Heroku](https://realpython.com/flask-by-example-part-1-project-setup/#deploying-the-application-to-heroku)
+
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
 - Heroku Account Setup
 - Heroku Command-Line Interface (CLI)
@@ -107,6 +112,8 @@ $ heroku open
 
 ## Redeploy The App
 
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
+
 Now let’s make a small change to the app and see how you can redeploy it. Edit `app.py` and modify the string a bit.
 ```shell
 $ git add app.py
@@ -115,6 +122,8 @@ $ git push heroku master
 ```
 
 ## [Using Heroku Pipelines to Implement a Deployment Workflow](https://realpython.com/flask-by-example-part-1-project-setup/#using-heroku-pipelines-to-implement-a-deployment-workflow)
+
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
 This particular workflow uses three separate environments called *local*, *staging*, and *production*.
 This kind of setup is widely used in professional projects since it allows testing and
@@ -135,6 +144,8 @@ to run the integration tests against the build, which will become the next relea
 </p>
 
 ### [Implementing the Deployment Workflow in Heroku](https://realpython.com/flask-by-example-part-1-project-setup/#implementing-the-deployment-workflow-in-heroku)
+
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
 Implementing the workflow in Heroku consists of two steps:
 
@@ -193,6 +204,8 @@ Adding ⬢ nt-example-app-staging to neural-trading-example-app pipeline as stag
 
 ### [Deploying and Promoting to Staging and Production](https://realpython.com/flask-by-example-part-1-project-setup/#deploying-and-promoting-to-staging-and-production)
 
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
+
 Now that you have your applications and pipeline configured,
 you can use it to deploy your application to staging, review it there, and then promote it to production.
 
@@ -223,7 +236,9 @@ Didn't get the idea.
 
 ## [APScheduler](https://apscheduler.readthedocs.io/en/latest/userguide.html#)
 
-Installing:
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
+
+### Installing:
 
 ```bash
 $ pip install apscheduler
@@ -303,6 +318,8 @@ their triggers and next run times.
 - [prod](https://neural-trading-example-app.herokuapp.com/)
 
 ## Credits
+
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Bootstrap - Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
