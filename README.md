@@ -231,6 +231,8 @@ that it’s running the latest version.
 
 ## [Managing Settings and Secrets for Different Environments](https://realpython.com/flask-by-example-part-1-project-setup/#managing-settings-and-secrets-for-different-environments)
 
+[(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
+
 Didn't get the idea.
 
 
