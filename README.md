@@ -221,6 +221,8 @@ that it’s running the latest version.
 Didn't get the idea.
 
 
+##
+
 ## Links
 
 - [staging](https://nt-example-app-staging.herokuapp.com/)
@@ -237,6 +239,8 @@ Didn't get the idea.
 - [Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
 - [favicon-converter](https://favicon.io/favicon-converter/)
 - [Blueprints in Flask | Real Python](https://realpython.com/flask-blueprint/#what-a-flask-blueprint-looks-like)
+- [`apscheduler` package](https://apscheduler.readthedocs.io/en/latest/userguide.html)
+- [`apscheduler.triggers.interval.IntervalTrigger`](https://apscheduler.readthedocs.io/en/latest/modules/triggers/interval.html?highlight=interval#apscheduler.triggers.interval.IntervalTrigger)
 
 
 

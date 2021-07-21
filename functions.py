@@ -1,4 +1,4 @@
-
+import datetime
 
 def get_navbar_titles(name, status):
     nav_bar_titles = [
@@ -15,14 +15,14 @@ def get_navbar_titles(name, status):
         {
             'name': 'Analysis',
             'link': '/analysis',
-            'status': 'disabled'
+            'status': ''
         },
     ]
     for i in nav_bar_titles:
         if i['name'] == name:
             i['status'] = status
             break
-    nav_bar_titles[2]['status'] = 'disabled'
+    # nav_bar_titles[2]['status'] = 'disabled'
     return nav_bar_titles
 
 

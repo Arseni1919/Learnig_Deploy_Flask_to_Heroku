@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Analysis{% endblock %}
+
+{% block body %}
+    <div class="container pd-10">
+        <h1 class="text-center">Analysis</h1>
+    </div>
+    <div class="container pd-10">
+        <h2>List of Times:</h2>
+        <p>
+        <ol>
+            {% for item in list_to_print %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
+        </p>
+        <a class="btn btn-outline-primary" href="/analysis/refresh" role="button">Refresh</a>
+        <a class="btn btn-outline-danger" href="/analysis/clear" role="button">Clear</a>
+    </div>
+
+{% endblock %}
