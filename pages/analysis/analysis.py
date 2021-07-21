@@ -23,7 +23,6 @@ def timed_job():
         list_to_print.append(datetime.datetime.now())
 
 
-
 job = scheduler.add_job(timed_job, 'interval', seconds=1, id='time_list')
 
 
@@ -40,9 +39,9 @@ def refresh_func():
     names_of_jobs = [item.id for item in scheduler.get_jobs()]
     # scheduler.print_jobs()
 
-    if 'time_list' not in names_of_jobs:
+    if 'time_list' not in names_of_jobs and len(list_to_print) < 4:
         # print(f'names_of_jobs: {names_of_jobs} and entered inside the if statement')
-        scheduler.add_job(timed_job, 'interval', seconds=1, id='time_list')
+        scheduler.add_job(timed_job, 'interval', seconds=5, id='time_list')
 
     return redirect(url_for('analysis_bp.analysis_home_func'))
 
