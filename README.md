@@ -325,19 +325,20 @@ their triggers and next run times.
 
 [(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
-- [Bootstrap](https://getbootstrap.com/)
-- [Bootstrap - Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [Deploying a Python Flask Example Application Using Heroku | Real Python](https://realpython.com/flask-by-example-part-1-project-setup/)
-- [Python Web Applications: Deploy Your Script as a Flask App | Real Python](https://realpython.com/python-web-applications/)
-- [Getting Started on Heroku with Python | Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)
-- [Pipelines | Heroku](https://devcenter.heroku.com/articles/pipelines)
-- [Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
-- [favicon-converter](https://favicon.io/favicon-converter/)
-- [Blueprints in Flask | Real Python](https://realpython.com/flask-blueprint/#what-a-flask-blueprint-looks-like)
-- [`apscheduler` package](https://apscheduler.readthedocs.io/en/latest/userguide.html)
-- [`apscheduler.triggers.interval.IntervalTrigger`](https://apscheduler.readthedocs.io/en/latest/modules/triggers/interval.html?highlight=interval#apscheduler.triggers.interval.IntervalTrigger)
-
-
+- [getbootstrap | Bootstrap](https://getbootstrap.com/)
+- [getbootstrap | Bootstrap - Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Real Python | Deploying a Python Flask Example Application Using Heroku](https://realpython.com/flask-by-example-part-1-project-setup/)
+- [Real Python | Python Web Applications: Deploy Your Script as a Flask App](https://realpython.com/python-web-applications/)
+- [Real Python | Blueprints in Flask](https://realpython.com/flask-blueprint/#what-a-flask-blueprint-looks-like)
+- [Real Python | Flask by Example – Setting up Postgres, SQLAlchemy, and Alembic](https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/)
+- [Heroku | Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python)
+- [Heroku | Pipelines](https://devcenter.heroku.com/articles/pipelines)
+- [stackoverflow | Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
+- [favicon.io | favicon-converter](https://favicon.io/favicon-converter/)
+- [apscheduler | `apscheduler` package](https://apscheduler.readthedocs.io/en/latest/userguide.html)
+- [apscheduler | `apscheduler.triggers.interval.IntervalTrigger`](https://apscheduler.readthedocs.io/en/latest/modules/triggers/interval.html?highlight=interval#apscheduler.triggers.interval.IntervalTrigger)
+- [TDS | Create a web application with python + Flask + PostgreSQL and deploy on Heroku](https://medium.com/@dushan14/create-a-web-application-with-python-flask-postgresql-and-deploy-on-heroku-243d548335cc)
+- [TDS | Focus on deploying a simple Flask Application into Heroku, interacting with PostgreSQL and Troubleshooting](https://towardsdatascience.com/deploy-a-micro-flask-application-into-heroku-with-postgresql-database-d95fd0c19408)
 
 
 
