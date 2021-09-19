@@ -233,8 +233,33 @@ that it’s running the latest version.
 
 [(back)](https://github.com/Arseni1919/Learnig_Deploy_Flask_to_Heroku#contents)
 
-Didn't get the idea.
+Most applications require different settings for each environment to do things
+like enabling debugging features or pointing to other databases.
+Some of these settings, like **authentication credentials**, **database passwords**, and **API keys**,
+are very sensitive, so you must avoid hard-coding them into the application files.
 
+You can create a `config.py` file to hold the non-sensitive configuration values
+and read the sensitive ones from environment variables.
+In the following code block, you can see the source code for config.py:
+
+```python
+import os
+
+class Config:
+    DEBUG = False
+    DEVELOPMENT = False
+    SECRET_KEY = os.getenv("SECRET_KEY", "this-is-the-default-key")
+
+class ProductionConfig(Config):
+    pass
+
+class StagingConfig(Config):
+    DEBUG = True
+
+class DevelopmentConfig(Config):
+    DEBUG = True
+    DEVELOPMENT = True
+```
 
 ## [APScheduler](https://apscheduler.readthedocs.io/en/latest/userguide.html#)
 
@@ -327,10 +352,10 @@ their triggers and next run times.
 
 - [getbootstrap | Bootstrap](https://getbootstrap.com/)
 - [getbootstrap | Bootstrap - Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [Real Python | Deploying a Python Flask Example Application Using Heroku](https://realpython.com/flask-by-example-part-1-project-setup/)
+- [Real Python 1 | Deploying a Python Flask Example Application Using Heroku](https://realpython.com/flask-by-example-part-1-project-setup/)
+- [Real Python 2 | Flask by Example – Setting up Postgres, SQLAlchemy, and Alembic](https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/)
 - [Real Python | Python Web Applications: Deploy Your Script as a Flask App](https://realpython.com/python-web-applications/)
 - [Real Python | Blueprints in Flask](https://realpython.com/flask-blueprint/#what-a-flask-blueprint-looks-like)
-- [Real Python | Flask by Example – Setting up Postgres, SQLAlchemy, and Alembic](https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/)
 - [Heroku | Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python)
 - [Heroku | Pipelines](https://devcenter.heroku.com/articles/pipelines)
 - [stackoverflow | Mac: Cmd+Shift+R - hard refresh](https://stackoverflow.com/questions/41144565/flask-does-not-see-change-in-js-file)
