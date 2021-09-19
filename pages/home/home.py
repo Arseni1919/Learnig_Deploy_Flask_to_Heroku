@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 from functions import *
 
+
 home_bp = Blueprint('home_bp', __name__,
                     template_folder='templates',
                     static_folder='static',)  # static_url_path='assets')
@@ -10,6 +11,7 @@ home_bp = Blueprint('home_bp', __name__,
 def home_func():
     # status: active, "", disabled
     nav_bar_titles = get_navbar_titles('Home', 'active')
+
     return render_template('home/home.html', nav_bar_titles=nav_bar_titles)
 
 
