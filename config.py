@@ -8,6 +8,7 @@ class Config:
     DEVELOPMENT = False
     SECRET_KEY = os.getenv("SECRET_KEY", "this-is-the-default-key")
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class ProductionConfig(Config):
@@ -15,8 +16,7 @@ class ProductionConfig(Config):
 
 
 class StagingConfig(Config):
-    DEVELOPMENT = True
-    DEBUG = True
+    pass
 
 
 class DevelopmentConfig(Config):
