@@ -9,8 +9,9 @@ from pages.analysis.analysis import analysis_bp
 app = Flask(__name__)
 env_config = os.getenv("APP_SETTINGS", "config.DevelopmentConfig")
 app.config.from_object(env_config)
+database_path = os.getenv('DATABASE_URL', '')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///nt_database'
+app.config['SQLALCHEMY_DATABASE_URI'] = database_path
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
