@@ -364,6 +364,7 @@ their triggers and next run times.
 - [apscheduler | `apscheduler.triggers.interval.IntervalTrigger`](https://apscheduler.readthedocs.io/en/latest/modules/triggers/interval.html?highlight=interval#apscheduler.triggers.interval.IntervalTrigger)
 - [TDS | Create a web application with python + Flask + PostgreSQL and deploy on Heroku](https://medium.com/@dushan14/create-a-web-application-with-python-flask-postgresql-and-deploy-on-heroku-243d548335cc)
 - [TDS | Focus on deploying a simple Flask Application into Heroku, interacting with PostgreSQL and Troubleshooting](https://towardsdatascience.com/deploy-a-micro-flask-application-into-heroku-with-postgresql-database-d95fd0c19408)
+- [GitHub | `python-dotenv`](https://github.com/theskumar/python-dotenv)
 
 
 
