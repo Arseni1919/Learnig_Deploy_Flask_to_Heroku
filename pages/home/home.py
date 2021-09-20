@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from functions import *
 
 
@@ -20,6 +20,9 @@ def about_func():
     # status: active, "", disabled
     nav_bar_titles = get_navbar_titles('About', 'active')
     return render_template('home/about.html', nav_bar_titles=nav_bar_titles)
+
+
+
 
 # @home_bp.route('/view/<int:product_id>')
 # def view(product_id):

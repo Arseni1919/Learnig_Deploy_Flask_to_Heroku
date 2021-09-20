@@ -11,5 +11,22 @@
         <a class="btn btn-outline-primary" href="/secret_key">secret_key</a>
     </div>
 
+    {% if results %}
+        <ul>
+            {% for result in results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div class="container pd-10">
+        <form method="POST" action="/insert_result">
+            <input name="url" type="text" placeholder="url">
+            <input name="result_all" type="text" placeholder="result_all">
+            <input name="result_no_stop_words" type="text" placeholder="result_no_stop_words">
+            <input type="submit">
+        </form>
+    </div>
+
 
 {% endblock %}
